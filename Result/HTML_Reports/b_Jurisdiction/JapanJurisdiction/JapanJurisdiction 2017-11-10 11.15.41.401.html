@@ -1,0 +1,1576 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+ExtentReports Library 2.40.1 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
+Documentation: http://extentreports.relevantcodes.com 
+-->
+
+<extent id='a7fbb35a-2dba-4504-9b7b-e850641db0f3' />
+
+<meta charset='UTF-8' /> 
+<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
+<meta name='robots' content='noodp, noydir' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+<title>
+JapanJurisdiction
+</title>
+
+
+<link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css' type='text/css' rel='stylesheet'>
+<link href='https://cdn.rawgit.com/anshooarora/extentreports/a7fadea2f449184064e06465391f689653dea590/cdn/extent.css' type='text/css' rel='stylesheet' />
+
+<style>
+
+
+
+
+
+</style>
+</head>
+<body class='extent'>
+<!-- nav -->
+<nav>
+<div class='logo-container'>
+<a class='logo-content' href=#>
+<span>ProtoColl</span>
+</a>
+<a class='menu-toggle right' style='display:none;'>
+<i class='mdi-navigation-menu'></i>
+</a>
+</div>
+<ul id='slide-out' class='side-nav fixed'>
+<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+<li class='analysis waves-effect'><a href='#!' class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a></li>
+</ul>
+<a href='#' data-activates='slide-out' class='button-collapse'><i class='mdi-navigation-apps medium'></i></a>
+<span class='report-name'>JapanJurisdiction</span> <span class='report-headline'> Result</span>
+<ul class='right hide-on-med-and-down nav-right'>
+<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
+<i class='mdi-hardware-desktop-windows'></i>
+</li>
+<li>
+<span class='suite-started-time'>2017-11-10 11:26:55.659</span>
+</li>
+<li>
+<span>v2.40.1</span>
+</li>
+</ul>
+</nav>
+<!-- /nav -->
+
+<!-- container -->
+<div class='container'>
+
+<!-- dashboard -->
+<div id='dashboard-view' class='row'>
+<div class='time-totals'>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-tests'> 
+<span class='panel-name'>Total Tests</span> 
+<span class='total-tests'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-steps'> 
+<span class='panel-name'>Total Steps</span> 
+<span class='total-steps'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-current'> 
+<span class='panel-name'>Total Time Taken (Current Run)</span> 
+<span class='suite-total-time-current-value panel-lead'>0h 11m 14s+242ms</span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-overall'> 
+<span class='panel-name'>Total Time Taken (Overall)</span> 
+<span class='suite-total-time-overall-value panel-lead'>0h 11m 14s+242ms</span> 
+</div> 
+</div>
+<div class='col l2 m6 s6 suite-start-time'>
+<div class='card green-accent'> 
+<span class='panel-name'>Start</span> 
+<span class='panel-lead suite-started-time'>2017-11-10 11:15:41.417</span> 
+</div> 
+</div>
+<div class='col l2 m6 s6 suite-end-time'>
+<div class='card pink-accent'> 
+<span class='panel-name'>End</span> 
+<span class='panel-lead suite-ended-time'>2017-11-10 11:26:55.659</span> 
+</div> 
+</div>
+</div>
+<div class='charts'>
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Tests View</span>
+</div> 
+<div class='panel-setting modal-trigger test-count-setting right'>
+<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='test-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='t-pass-count weight-normal'></span> test(s) passed</span>
+</div> 
+<div>
+<span class='weight-light'><span class='t-fail-count weight-normal'></span> test(s) failed, <span class='t-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div> 
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Steps View</span>
+</div> 
+<div class='panel-setting modal-trigger step-status-filter right'>
+<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='step-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='s-pass-count weight-normal'></span> step(s) passed </span>
+</div> 
+<div>
+<span class='weight-light'><span class='s-fail-count weight-normal'></span> step(s) failed, <span class='s-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div>
+<div class='col s12 m12 l4 fh'> 
+<div class='card-panel'> 
+<span class='panel-name'>Pass Percentage</span> 
+<span class='pass-percentage panel-lead'></span> 
+<div class='progress light-blue lighten-3'> 
+<div class='determinate light-blue'></div> 
+</div> 
+</div> 
+</div>
+</div>
+<div class='system-view'>
+<div class='col l4 m12 s12'>
+<div class='card-panel'>
+<span class='label info outline right'>Environment</span>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 10</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>swetha.ramakrishna</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>1.8.0_152</td>
+</tr>
+<tr>
+<td>Host Name</td>
+<td>DELL-8Z6TQF2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class='category-summary-view'>
+<div class='col l4 m6 s12'>
+<div class='card-panel'>
+<span class='label info outline right'>Categories</span>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- /dashboard -->
+
+<!-- tests -->
+<div id='test-view' class='row _addedTable'>
+<div class='col _addedCell1'>
+<div class='contents'>
+<div class='card-panel heading'>
+<h5>Tests</h5>
+</div>
+<div class='card-panel filters'>
+<div>
+<a data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#' class='dropdown-button button tests-toggle'><i class='mdi-action-subject icon'></i></a>
+<ul id='tests-toggle' class='dropdown-content'>
+<li class='pass'><a href='#!'>Pass</a></li>
+<li class='fail'><a href='#!'>Fail</a></li>
+<li class='skip'><a href='#!'>Skip</a></li>
+<li class='divider'></li>
+<li class='clear'><a href='#!'>Clear Filters</a></li>
+</ul>
+</div>
+<div>
+<a id='clear-filters' alt='Clear Filters' title='Clear Filters'><i class='mdi-navigation-close icon'></i></a>
+</div>
+<div>&nbsp;&middot;&nbsp;</div>
+<div>
+<a id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'><i class='mdi-action-track-changes icon'></i></a>
+</div>
+<div>
+<a id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters' class='enabled'><i class='mdi-navigation-refresh icon'></i></i></a>
+</div>
+<div>&nbsp;&middot;</div>
+<div class='search' alt='Search Tests' title='Search Tests'>
+<div class='input-field left'>
+<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
+</div>
+<i class='mdi-action-search icon'></i>
+</div>
+</div>
+<div class='card-panel no-padding-h no-padding-v no-margin-v'>
+<div class='wrapper'>
+<ul id='test-collection' class='test-collection'>
+<li class='collection-item test displayed active pass' extentid='884f2aab-221e-459e-84b8-c377fdd3ca23'>
+<div class='test-head'>
+<span class='test-name'>SD_140_86145 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:15:41.417</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:18:24.819</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 2m 43s+402ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:15:55.624</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:01.005</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:07.266</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:11.416</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:13.532</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:15.603</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:21.829</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:24.957</td>
+<td class='step-name'>JP_Entities heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:27.057</td>
+<td class='step-name'>JP_Entities radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:31.248</td>
+<td class='step-name'>Click JP_Entities radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:33.306</td>
+<td class='step-name'>JP_Entities radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:37.471</td>
+<td class='step-name'>Click JP_Entities radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:39.532</td>
+<td class='step-name'>JP_Entities radio text 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:43.715</td>
+<td class='step-name'>Click JP_Entities radio 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:45.782</td>
+<td class='step-name'>JP_EntitiesNotAMultiBranch heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:47.859</td>
+<td class='step-name'>JP_EntitiesNotAMultiBranch radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:52.043</td>
+<td class='step-name'>Click JP_EntitiesNotAMultiBranch radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:54.142</td>
+<td class='step-name'>JP_EntitiesNotAMultiBranch radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:16:58.304</td>
+<td class='step-name'>Click JP_EntitiesNotAMultiBranch radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:00.409</td>
+<td class='step-name'>JP_AANAGroup heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:02.548</td>
+<td class='step-name'>JP_AANAGroup radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:06.739</td>
+<td class='step-name'>Click JP_AANAGroup radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:08.853</td>
+<td class='step-name'>JP_AANAGroup radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:13.024</td>
+<td class='step-name'>Click JP_AANAGroup radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:15.162</td>
+<td class='step-name'>JP_AANAGroup2 heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:17.290</td>
+<td class='step-name'>JP_AANAThreshold heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:19.379</td>
+<td class='step-name'>JP_AANAThreshold radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:23.586</td>
+<td class='step-name'>Click JP_AANAThreshold radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:25.687</td>
+<td class='step-name'>JP_AANAThreshold radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:29.855</td>
+<td class='step-name'>Click JP_AANAThreshold radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:31.973</td>
+<td class='step-name'>JP_AANAThreshold radio text 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:36.130</td>
+<td class='step-name'>Click JP_AANAThreshold radio 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:38.241</td>
+<td class='step-name'>JP_AANAThreshold radio text 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:42.443</td>
+<td class='step-name'>Click JP_AANAThreshold radio 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:44.533</td>
+<td class='step-name'>JP_AANAThresholdEstimate heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:46.644</td>
+<td class='step-name'>JP_AANAThresholdEstimate radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:50.783</td>
+<td class='step-name'>Click JP_AANAThresholdEstimate radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:52.848</td>
+<td class='step-name'>JP_AANAThresholdEstimate radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:57.020</td>
+<td class='step-name'>Click JP_AANAThresholdEstimate radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:17:59.105</td>
+<td class='step-name'>JP_AANAThresholdEstimate radio text 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:03.298</td>
+<td class='step-name'>Click JP_AANAThresholdEstimate radio 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:05.404</td>
+<td class='step-name'>JP_AANAThresholdEstimate radio text 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:09.578</td>
+<td class='step-name'>Click JP_AANAThresholdEstimate radio 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:11.669</td>
+<td class='step-name'>JP_AANAThresholdEstimate radio text 5</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:15.886</td>
+<td class='step-name'>Click JP_AANAThresholdEstimate radio 5</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:17.987</td>
+<td class='step-name'>JP_AANAThresholdEstimate radio text 6</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:22.146</td>
+<td class='step-name'>Click JP_AANAThresholdEstimate radio 6</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:18:24.819</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='b619e9f5-bde3-4e1b-9519-81ce7f040efc'>
+<div class='test-head'>
+<span class='test-name'>SLFDSC_147_86228 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:18:24.819</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:19:36.944</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 12s+125ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:39.084</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:44.436</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:50.675</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:54.782</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:56.836</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:18:58.936</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:05.143</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:09.330</td>
+<td class='step-name'>Select Above 420 trillion radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:13.481</td>
+<td class='step-name'>Change option from None of the Above</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:17.687</td>
+<td class='step-name'>Select Not above 420 trillion radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:21.817</td>
+<td class='step-name'>Select one of last two radio buttons under Threshold heading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:25.895</td>
+<td class='step-name'>Change option to any other options other than Decline to answer</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:30.113</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:34.258</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:19:36.944</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='bf167c12-a26b-4323-9bfa-0cb9d4592fb7'>
+<div class='test-head'>
+<span class='test-name'>SD_148_86258 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:19:36.944</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:20:30.318</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 53s+374ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:51.161</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:19:56.414</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:02.629</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:04.708</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:06.789</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:08.876</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:15.051</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:19.233</td>
+<td class='step-name'>Select Above 420 trillion radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:23.417</td>
+<td class='step-name'>Change option to any other options other than Decline to answer</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:27.653</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:20:30.318</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='30a8cf14-808d-45e9-827f-80b70aec0537'>
+<div class='test-head'>
+<span class='test-name'>SD_143_86264 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:20:30.318</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:21:28.081</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 57s+763ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:44.540</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:49.916</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:56.193</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:20:58.292</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:00.393</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:02.511</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:08.792</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:12.966</td>
+<td class='step-name'>Select one option under Member of a Japan AANA Group heading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:21.277</td>
+<td class='step-name'>Select one option under Entities in Japan Entity Status heading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:25.449</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:21:28.081</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='2782354c-0581-457f-9f4c-143d3b9b4569'>
+<div class='test-head'>
+<span class='test-name'>SD_148_86260 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:21:28.081</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:22:25.679</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 57s+598ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:42.218</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:47.580</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:53.820</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:55.912</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:21:58.036</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:00.096</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:06.341</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:10.572</td>
+<td class='step-name'>Select Not above 420 trillion radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:14.721</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:18.907</td>
+<td class='step-name'>Change option to any other options other than Decline to answer</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:23.053</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:22:25.679</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='15d0bdfa-1a29-4c53-83c0-d24548130c7f'>
+<div class='test-head'>
+<span class='test-name'>SD_148_86266 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:22:25.679</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:23:31.777</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 6s+98ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:39.695</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:44.975</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:51.281</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:53.421</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:55.582</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:22:57.712</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:03.916</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:08.093</td>
+<td class='step-name'>Select Principal Japan Ultimate Parent radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:12.234</td>
+<td class='step-name'>Select "separately reported by the following person" radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:16.367</td>
+<td class='step-name'>Change option to any other options other than Decline to answer</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:20.584</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:24.732</td>
+<td class='step-name'>Change option to any other options other than Decline to answer</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:28.928</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:23:31.777</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='ca8cbe02-293b-4e5a-a2d5-29e852ed673e'>
+<div class='test-head'>
+<span class='test-name'>SLFDSC_141_86229 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:23:31.780</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:24:25.576</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 53s+796ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:46.594</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:51.883</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:23:58.174</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:00.235</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:02.343</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:04.434</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:10.639</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:14.804</td>
+<td class='step-name'>Select one option under Member of a Japan AANA Group heading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:18.943</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:23.028</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:24:25.576</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='5e52e4a3-d50a-416a-b579-a126f10d065c'>
+<div class='test-head'>
+<span class='test-name'>SLFDSC_145_86326 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:24:25.577</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:25:40.048</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 14s+471ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:39.829</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:45.136</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:51.548</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:55.744</td>
+<td class='step-name'>EntityIsMultibranch</td>
+<td class='step-details'>Checked</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:57.835</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:24:59.966</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:02.093</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:08.254</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:12.468</td>
+<td class='step-name'>Select one option under Entities in Japan Entity Status heading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:16.632</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:20.755</td>
+<td class='step-name'>Select one option under Entities in Japan Entity Status heading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:24.944</td>
+<td class='step-name'>Select one option under Entities in Japan Entity Status heading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:29.071</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:33.264</td>
+<td class='step-name'>Select one option under Head Office and/or Branches Outside Japan heading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:37.387</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:25:40.048</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='edeb030e-e22a-49a1-b1fa-21d4e544a2ad'>
+<div class='test-head'>
+<span class='test-name'>SD_AANA_Modal_85403 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-10 11:25:40.049</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-10 11:26:55.604</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 15s+555ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:54.565</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:25:59.964</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:06.250</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:08.338</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:10.444</td>
+<td class='step-name'>JapanHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:12.555</td>
+<td class='step-name'>JapanHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:18.784</td>
+<td class='step-name'>JapanHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:29.046</td>
+<td class='step-name'>Select Principal Japan Ultimate Parent radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:26:32.168</td>
+<td class='step-name'>clickLink</td>
+<td class='step-details'>Clicked on Link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:36.233</td>
+<td class='step-name'>verifyHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:38.303</td>
+<td class='step-name'>verifyHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:40.378</td>
+<td class='step-name'>verifyHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:42.531</td>
+<td class='step-name'>verifyHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:44.651</td>
+<td class='step-name'>verifyHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:46.742</td>
+<td class='step-name'>verifyHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:48.809</td>
+<td class='step-name'>verifyHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>11:26:52.943</td>
+<td class='step-name'>Cancel Button</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>11:26:55.604</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id='test-details-wrapper' class='col _addedCell2'>
+<div class='contents'>
+<div class='card-panel details-view'>
+<h5 class='details-name'></h5>
+<div class='details-container'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /tests -->
+
+<!-- categories -->
+<!-- /categories -->
+
+<!-- exceptions -->
+<!-- /exceptions -->
+
+<!-- testrunner logs -->
+<!-- /testrunner logs -->
+
+</div>
+<!-- /container -->
+
+<!-- test dashboard counts setting -->
+<div id='test-count-setting' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Configure Tests Count Setting</h5> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodes' class='with-gap'> 
+<label for='parentWithoutNodes'>Parent Tests Only (Does not include child nodes in counts)</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodesAndNodes' class='with-gap'> 
+<label for='parentWithoutNodesAndNodes'>Parent Tests Without Child Tests + Child Tests</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='childNodes' class='with-gap'> 
+<label for='childNodes'>Child Tests Only</label> 
+</div> 
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /test dashboard counts setting -->
+
+<!-- filter for step status -->
+<div id='step-status-filter' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Select status</h5> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-pass'> 
+<label for='step-dashboard-filter-pass'>Pass</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fail'> 
+<label for='step-dashboard-filter-fail'>Fail</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fatal'> 
+<label for='step-dashboard-filter-fatal'>Fatal</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-error'> 
+<label for='step-dashboard-filter-error'>Error</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-warning'> 
+<label for='step-dashboard-filter-warning'>Warning</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-skip'> 
+<label for='step-dashboard-filter-skip'>Skipped</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-info'> 
+<label for='step-dashboard-filter-info'>Info</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-unknown'> 
+<label for='step-dashboard-filter-unknown'>Unknown</label> 
+</div>
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /filter for step status -->
+
+<script src='https://cdn.rawgit.com/anshooarora/extentreports/3caea19ade2c7b195f5ab8aecb6e22541651f5d1/cdn/extent.js' type='text/javascript'></script>
+
+<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
+<script>
+
+
+$(document).ready(function() {
+
+});
+
+
+</script>
+</body>
+</html>

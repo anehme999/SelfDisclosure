@@ -1,0 +1,1705 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+ExtentReports Library 2.40.1 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
+Documentation: http://extentreports.relevantcodes.com 
+-->
+
+<extent id='aaab3f0a-f00a-4103-b647-cdfdf0b9e5c4' />
+
+<meta charset='UTF-8' /> 
+<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
+<meta name='robots' content='noodp, noydir' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+<title>
+CanadaJurisdiction
+</title>
+
+
+<link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css' type='text/css' rel='stylesheet'>
+<link href='https://cdn.rawgit.com/anshooarora/extentreports/a7fadea2f449184064e06465391f689653dea590/cdn/extent.css' type='text/css' rel='stylesheet' />
+
+<style>
+
+
+
+
+
+</style>
+</head>
+<body class='extent'>
+<!-- nav -->
+<nav>
+<div class='logo-container'>
+<a class='logo-content' href=#>
+<span>ProtoColl</span>
+</a>
+<a class='menu-toggle right' style='display:none;'>
+<i class='mdi-navigation-menu'></i>
+</a>
+</div>
+<ul id='slide-out' class='side-nav fixed'>
+<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+<li class='analysis waves-effect'><a href='#!' class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a></li>
+</ul>
+<a href='#' data-activates='slide-out' class='button-collapse'><i class='mdi-navigation-apps medium'></i></a>
+<span class='report-name'>CanadaJurisdiction</span> <span class='report-headline'> Result</span>
+<ul class='right hide-on-med-and-down nav-right'>
+<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
+<i class='mdi-hardware-desktop-windows'></i>
+</li>
+<li>
+<span class='suite-started-time'>2018-08-10 08:37:49.578</span>
+</li>
+<li>
+<span>v2.40.1</span>
+</li>
+</ul>
+</nav>
+<!-- /nav -->
+
+<!-- container -->
+<div class='container'>
+
+<!-- dashboard -->
+<div id='dashboard-view' class='row'>
+<div class='time-totals'>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-tests'> 
+<span class='panel-name'>Total Tests</span> 
+<span class='total-tests'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-steps'> 
+<span class='panel-name'>Total Steps</span> 
+<span class='total-steps'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-current'> 
+<span class='panel-name'>Total Time Taken (Current Run)</span> 
+<span class='suite-total-time-current-value panel-lead'>0h 12m 16s+361ms</span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-overall'> 
+<span class='panel-name'>Total Time Taken (Overall)</span> 
+<span class='suite-total-time-overall-value panel-lead'>0h 12m 16s+361ms</span> 
+</div> 
+</div>
+<div class='col l2 m6 s6 suite-start-time'>
+<div class='card green-accent'> 
+<span class='panel-name'>Start</span> 
+<span class='panel-lead suite-started-time'>2018-08-10 08:25:33.217</span> 
+</div> 
+</div>
+<div class='col l2 m6 s6 suite-end-time'>
+<div class='card pink-accent'> 
+<span class='panel-name'>End</span> 
+<span class='panel-lead suite-ended-time'>2018-08-10 08:37:49.578</span> 
+</div> 
+</div>
+</div>
+<div class='charts'>
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Tests View</span>
+</div> 
+<div class='panel-setting modal-trigger test-count-setting right'>
+<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='test-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='t-pass-count weight-normal'></span> test(s) passed</span>
+</div> 
+<div>
+<span class='weight-light'><span class='t-fail-count weight-normal'></span> test(s) failed, <span class='t-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div> 
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Steps View</span>
+</div> 
+<div class='panel-setting modal-trigger step-status-filter right'>
+<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='step-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='s-pass-count weight-normal'></span> step(s) passed </span>
+</div> 
+<div>
+<span class='weight-light'><span class='s-fail-count weight-normal'></span> step(s) failed, <span class='s-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div>
+<div class='col s12 m12 l4 fh'> 
+<div class='card-panel'> 
+<span class='panel-name'>Pass Percentage</span> 
+<span class='pass-percentage panel-lead'></span> 
+<div class='progress light-blue lighten-3'> 
+<div class='determinate light-blue'></div> 
+</div> 
+</div> 
+</div>
+</div>
+<div class='system-view'>
+<div class='col l4 m12 s12'>
+<div class='card-panel'>
+<span class='label info outline right'>Environment</span>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 10</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>swetha.ramakrishna</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>1.8.0_181</td>
+</tr>
+<tr>
+<td>Host Name</td>
+<td>DELL-8Z6TQF2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class='category-summary-view'>
+<div class='col l4 m6 s12'>
+<div class='card-panel'>
+<span class='label info outline right'>Categories</span>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- /dashboard -->
+
+<!-- tests -->
+<div id='test-view' class='row _addedTable'>
+<div class='col _addedCell1'>
+<div class='contents'>
+<div class='card-panel heading'>
+<h5>Tests</h5>
+</div>
+<div class='card-panel filters'>
+<div>
+<a data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#' class='dropdown-button button tests-toggle'><i class='mdi-action-subject icon'></i></a>
+<ul id='tests-toggle' class='dropdown-content'>
+<li class='pass'><a href='#!'>Pass</a></li>
+<li class='fail'><a href='#!'>Fail</a></li>
+<li class='skip'><a href='#!'>Skip</a></li>
+<li class='divider'></li>
+<li class='clear'><a href='#!'>Clear Filters</a></li>
+</ul>
+</div>
+<div>
+<a id='clear-filters' alt='Clear Filters' title='Clear Filters'><i class='mdi-navigation-close icon'></i></a>
+</div>
+<div>&nbsp;&middot;&nbsp;</div>
+<div>
+<a id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'><i class='mdi-action-track-changes icon'></i></a>
+</div>
+<div>
+<a id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters' class='enabled'><i class='mdi-navigation-refresh icon'></i></i></a>
+</div>
+<div>&nbsp;&middot;</div>
+<div class='search' alt='Search Tests' title='Search Tests'>
+<div class='input-field left'>
+<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
+</div>
+<i class='mdi-action-search icon'></i>
+</div>
+</div>
+<div class='card-panel no-padding-h no-padding-v no-margin-v'>
+<div class='wrapper'>
+<ul id='test-collection' class='test-collection'>
+<li class='collection-item test displayed active pass' extentid='b7636426-ac9d-4495-a8c2-91cf35b9512a'>
+<div class='test-head'>
+<span class='test-name'>SD_118_85446 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2018-08-10 08:25:33.232</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2018-08-10 08:28:37.692</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 3m 4s+460ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:25:47.319</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:25:52.700</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:25:59.090</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:01.209</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:07.585</td>
+<td class='step-name'>CanadaHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:09.818</td>
+<td class='step-name'>CanadaOSFIEntity heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:11.973</td>
+<td class='step-name'>CanadaOSFIEntity radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:16.211</td>
+<td class='step-name'>Click CanadaOSFIEntity radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:18.327</td>
+<td class='step-name'>CanadaOSFIEntity radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:22.480</td>
+<td class='step-name'>Click CanadaOSFIEntity radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:24.557</td>
+<td class='step-name'>CanadaOSFIEntity2 heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:26.690</td>
+<td class='step-name'>CanadaBranchFRFI heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:28.808</td>
+<td class='step-name'>CanadaBranchFRFI radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:32.978</td>
+<td class='step-name'>Click CanadaBranchFRFI radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:35.065</td>
+<td class='step-name'>CanadaBranchFRFI radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:39.280</td>
+<td class='step-name'>Click CanadaBranchFRFI radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:41.384</td>
+<td class='step-name'>CanadaCoveredEntity heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:43.537</td>
+<td class='step-name'>CanadaCoveredEntity radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:47.751</td>
+<td class='step-name'>Click CanadaCoveredEntity radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:49.860</td>
+<td class='step-name'>CanadaCoveredEntity radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:54.070</td>
+<td class='step-name'>Click CanadaCoveredEntity radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:56.168</td>
+<td class='step-name'>CanadaCrossBorderStatus heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:26:58.323</td>
+<td class='step-name'>CanadaCrossBorderStatus radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:02.534</td>
+<td class='step-name'>Click CanadaCrossBorderStatus radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:04.630</td>
+<td class='step-name'>CanadaCrossBorderStatus radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:08.841</td>
+<td class='step-name'>Click CanadaCrossBorderStatus radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:10.968</td>
+<td class='step-name'>CanadaCrossBorderStatus2 heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:13.086</td>
+<td class='step-name'>CanadaAANAInformation heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:15.228</td>
+<td class='step-name'>CanadaAANAInformation radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:19.482</td>
+<td class='step-name'>Click CanadaAANAInformation radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:21.636</td>
+<td class='step-name'>CanadaAANAInformation radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:25.828</td>
+<td class='step-name'>Click CanadaAANAInformation radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:27.926</td>
+<td class='step-name'>CanadaAANAInformation2 heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:30.061</td>
+<td class='step-name'>CanadaAANAThreshold heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:32.210</td>
+<td class='step-name'>CanadaAANAThreshold radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:36.412</td>
+<td class='step-name'>Click CanadaAANAThreshold radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:38.518</td>
+<td class='step-name'>CanadaAANAThreshold radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:42.709</td>
+<td class='step-name'>Click CanadaAANAThreshold radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:44.809</td>
+<td class='step-name'>CanadaAANAThreshold radio text 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:49.041</td>
+<td class='step-name'>Click CanadaAANAThreshold radio 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:51.099</td>
+<td class='step-name'>CanadaAANAThreshold radio text 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:55.319</td>
+<td class='step-name'>Click CanadaAANAThreshold radio 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:57.389</td>
+<td class='step-name'>CanadaAANAThresholdEstimate heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:27:59.460</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:03.614</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:05.711</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:09.904</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:12.018</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:16.243</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:18.355</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:22.574</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:24.701</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 5</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:28.921</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 5</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:31.053</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 6</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:35.303</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 6</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>08:28:37.692</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='36704ad5-9212-4191-8d0c-8fa8108386d2'>
+<div class='test-head'>
+<span class='test-name'>SD_118_86314 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2018-08-10 08:28:37.692</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2018-08-10 08:29:41.038</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 3s+346ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:51.600</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:28:56.959</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:03.251</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:05.352</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:07.470</td>
+<td class='step-name'>CanadaHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:13.808</td>
+<td class='step-name'>CanadaHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:18.059</td>
+<td class='step-name'>Select yes radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:25.256</td>
+<td class='step-name'>EntityIsMultibranch</td>
+<td class='step-details'>Checked</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:32.515</td>
+<td class='step-name'>Select yes radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:36.699</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>08:29:41.038</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='e7c31212-f2da-4b50-a883-90076eb95aee'>
+<div class='test-head'>
+<span class='test-name'>SD_118_86418 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2018-08-10 08:29:41.038</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2018-08-10 08:30:35.676</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 54s+638ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:29:55.302</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:00.688</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:07.093</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:09.233</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:11.367</td>
+<td class='step-name'>CanadaHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:17.742</td>
+<td class='step-name'>CanadaHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:21.955</td>
+<td class='step-name'>Select yes radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:26.153</td>
+<td class='step-name'>Select yes radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:30.344</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>08:30:35.676</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='9d53765d-208a-4d61-9e21-5a26b2d1b12a'>
+<div class='test-head'>
+<span class='test-name'>SD_118_86422 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2018-08-10 08:30:35.676</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2018-08-10 08:31:24.506</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 48s+830ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:49.338</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:30:54.741</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:01.047</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:03.167</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:05.273</td>
+<td class='step-name'>CanadaHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:07.422</td>
+<td class='step-name'>CanadaHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:13.726</td>
+<td class='step-name'>CanadaHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:17.978</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:22.126</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>08:31:24.506</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='365639dc-2504-4ff3-ab36-c39223f96f37'>
+<div class='test-head'>
+<span class='test-name'>SD_118_86420 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2018-08-10 08:31:24.506</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2018-08-10 08:32:20.552</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 56s+46ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:38.158</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:43.509</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:49.778</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:51.933</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:54.081</td>
+<td class='step-name'>CanadaHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:31:56.199</td>
+<td class='step-name'>CanadaHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:02.459</td>
+<td class='step-name'>CanadaHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:06.638</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:10.909</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:15.139</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>08:32:20.552</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='a685765d-4d75-4d24-aa96-8bdb60ae6eca'>
+<div class='test-head'>
+<span class='test-name'>SD_118_86424 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2018-08-10 08:32:20.553</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2018-08-10 08:33:27.017</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 6s+464ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:34.412</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:39.805</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:46.158</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:48.313</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:50.444</td>
+<td class='step-name'>CanadaHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:52.530</td>
+<td class='step-name'>CanadaHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:32:58.807</td>
+<td class='step-name'>CanadaHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:02.941</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:07.082</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:11.224</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:18.368</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:22.603</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>08:33:27.017</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='84bc69b6-7ab3-4fe2-a66d-5f1d7e76073e'>
+<div class='test-head'>
+<span class='test-name'>SD_118_86426 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2018-08-10 08:33:27.018</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2018-08-10 08:34:38.533</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 11s+515ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:40.672</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:46.021</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:52.336</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:54.445</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:56.536</td>
+<td class='step-name'>CanadaHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:33:58.638</td>
+<td class='step-name'>CanadaHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:04.877</td>
+<td class='step-name'>CanadaHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:09.145</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:13.329</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:17.493</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:21.717</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:29.952</td>
+<td class='step-name'>Select radio button</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:34.106</td>
+<td class='step-name'>Save Entity</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>08:34:38.533</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass' extentid='0b7a224a-e025-49e8-8035-88ab21f2f9fb'>
+<div class='test-head'>
+<span class='test-name'>SD_118_86133 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2018-08-10 08:34:38.533</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2018-08-10 08:37:49.530</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 3m 10s+997ms</span>
+</div>
+<div class='test-desc'>null</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:52.629</td>
+<td class='step-name'>Login</td>
+<td class='step-details'>Self Disclosure Title Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:34:57.982</td>
+<td class='step-name'>Click Details</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:04.339</td>
+<td class='step-name'>Click Amend Entities</td>
+<td class='step-details'>Able to click</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:06.456</td>
+<td class='step-name'>RelevantRegulatoryJurisdiction</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:08.542</td>
+<td class='step-name'>CanadaHeading</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:10.658</td>
+<td class='step-name'>CanadaHeading Collapsed</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:16.892</td>
+<td class='step-name'>CanadaHeading Open</td>
+<td class='step-details'>Verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:21.017</td>
+<td class='step-name'>CanadaOSFIEntity heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:23.135</td>
+<td class='step-name'>CanadaOSFIEntity radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:27.325</td>
+<td class='step-name'>Click CanadaOSFIEntity radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:29.482</td>
+<td class='step-name'>CanadaOSFIEntity radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:33.689</td>
+<td class='step-name'>Click CanadaOSFIEntity radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:35.787</td>
+<td class='step-name'>CanadaOSFIEntity2 heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:37.952</td>
+<td class='step-name'>CanadaBranchFRFI heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:40.153</td>
+<td class='step-name'>CanadaBranchFRFI radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:44.383</td>
+<td class='step-name'>Click CanadaBranchFRFI radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:46.482</td>
+<td class='step-name'>CanadaBranchFRFI radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:50.723</td>
+<td class='step-name'>Click CanadaBranchFRFI radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:52.822</td>
+<td class='step-name'>CanadaCoveredEntity heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:54.908</td>
+<td class='step-name'>CanadaCoveredEntity radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:35:59.100</td>
+<td class='step-name'>Click CanadaCoveredEntity radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:01.196</td>
+<td class='step-name'>CanadaCoveredEntity radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:05.454</td>
+<td class='step-name'>Click CanadaCoveredEntity radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:07.581</td>
+<td class='step-name'>CanadaCrossBorderStatus heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:09.666</td>
+<td class='step-name'>CanadaCrossBorderStatus radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:13.858</td>
+<td class='step-name'>Click CanadaCrossBorderStatus radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:16.009</td>
+<td class='step-name'>CanadaCrossBorderStatus radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:20.210</td>
+<td class='step-name'>Click CanadaCrossBorderStatus radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:22.316</td>
+<td class='step-name'>CanadaCrossBorderStatus2 heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:24.466</td>
+<td class='step-name'>CanadaAANAInformation heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:26.600</td>
+<td class='step-name'>CanadaAANAInformation radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:30.757</td>
+<td class='step-name'>Click CanadaAANAInformation radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:32.873</td>
+<td class='step-name'>CanadaAANAInformation radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:37.044</td>
+<td class='step-name'>Click CanadaAANAInformation radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:39.194</td>
+<td class='step-name'>CanadaAANAInformation2 heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:41.381</td>
+<td class='step-name'>CanadaAANAThreshold heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:43.567</td>
+<td class='step-name'>CanadaAANAThreshold radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:47.852</td>
+<td class='step-name'>Click CanadaAANAThreshold radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:49.958</td>
+<td class='step-name'>CanadaAANAThreshold radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:54.144</td>
+<td class='step-name'>Click CanadaAANAThreshold radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:36:56.247</td>
+<td class='step-name'>CanadaAANAThreshold radio text 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:00.465</td>
+<td class='step-name'>Click CanadaAANAThreshold radio 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:02.616</td>
+<td class='step-name'>CanadaAANAThreshold radio text 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:06.870</td>
+<td class='step-name'>Click CanadaAANAThreshold radio 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:09.023</td>
+<td class='step-name'>CanadaAANAThresholdEstimate heading</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:11.161</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:15.417</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 1</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:17.548</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:21.804</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 2</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:23.923</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:28.131</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 3</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:30.244</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:34.422</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 4</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:36.533</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 5</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:40.793</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 5</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:42.893</td>
+<td class='step-name'>CanadaAANAThresholdEstimate radio text 6</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>08:37:47.130</td>
+<td class='step-name'>Click CanadaAANAThresholdEstimate radio 6</td>
+<td class='step-details'>verified</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>08:37:49.530</td>
+<td class='step-name'>quitBrowser</td>
+<td class='step-details'>Quit Browser</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id='test-details-wrapper' class='col _addedCell2'>
+<div class='contents'>
+<div class='card-panel details-view'>
+<h5 class='details-name'></h5>
+<div class='details-container'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /tests -->
+
+<!-- categories -->
+<!-- /categories -->
+
+<!-- exceptions -->
+<!-- /exceptions -->
+
+<!-- testrunner logs -->
+<!-- /testrunner logs -->
+
+</div>
+<!-- /container -->
+
+<!-- test dashboard counts setting -->
+<div id='test-count-setting' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Configure Tests Count Setting</h5> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodes' class='with-gap'> 
+<label for='parentWithoutNodes'>Parent Tests Only (Does not include child nodes in counts)</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodesAndNodes' class='with-gap'> 
+<label for='parentWithoutNodesAndNodes'>Parent Tests Without Child Tests + Child Tests</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='childNodes' class='with-gap'> 
+<label for='childNodes'>Child Tests Only</label> 
+</div> 
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /test dashboard counts setting -->
+
+<!-- filter for step status -->
+<div id='step-status-filter' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Select status</h5> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-pass'> 
+<label for='step-dashboard-filter-pass'>Pass</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fail'> 
+<label for='step-dashboard-filter-fail'>Fail</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fatal'> 
+<label for='step-dashboard-filter-fatal'>Fatal</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-error'> 
+<label for='step-dashboard-filter-error'>Error</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-warning'> 
+<label for='step-dashboard-filter-warning'>Warning</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-skip'> 
+<label for='step-dashboard-filter-skip'>Skipped</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-info'> 
+<label for='step-dashboard-filter-info'>Info</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-unknown'> 
+<label for='step-dashboard-filter-unknown'>Unknown</label> 
+</div>
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /filter for step status -->
+
+<script src='https://cdn.rawgit.com/anshooarora/extentreports/3caea19ade2c7b195f5ab8aecb6e22541651f5d1/cdn/extent.js' type='text/javascript'></script>
+
+<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
+<script>
+
+
+$(document).ready(function() {
+
+});
+
+
+</script>
+</body>
+</html>

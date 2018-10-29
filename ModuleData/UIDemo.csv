@@ -1,0 +1,7 @@
+//TestCaseName,Description,UserType,WorkGroup,Principal,AgreementCode,AgteementType,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,Cleanup
+LogIn,login in application,rueda.all,Omgeo1234,,,,,,,,,,,,,,,,,,
+CreateAgreement,CreateAgreement,rueda.all,Omgeo1234,Test01#Test01#QA Principal QABluP601#QA Test Work Group BLU#Test#OTC#Both#USDollar#QABKR001,,,,,,,,,,,,,,,,,
+CreateAgreement,CreateAgreement,rueda.all,Omgeo1234,Test01#Test01#QA Principal QABluP60#QA Test Work Group #Test#OTC#Both#USDollar#QABKR001,,,,,,,,,,,,,,,,,
+CreateAgreement,CreateAgreement,rueda.all,Omgeo1234,Test01#Test01#QA Principal QABluP601#QA Test Work Group BLU#Test#OTC#Both#USDollar#QABKR001,,,,,,,,,,,,,,,,,YES
+SearchAgreement,SearchAgreement,rueda.all,Omgeo1234,QAAUNTTH-P004B012#QAAUNTTH-P004B012#QAMngP004#MNG#ETD,,,,,,,,,,,,,,,,,
+end,End of the Testcases,,,,,,,,,,,,,,,,,,,,
